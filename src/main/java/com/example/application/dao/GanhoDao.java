@@ -1,7 +1,7 @@
 package com.example.application.dao;
 
 import com.example.application.database.connection.ConexaoBanco;
-import com.example.application.entity.dto.Ganho;
+import com.example.application.dto.Ganho;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package com.example.application.dao;
 
 import com.example.application.database.connection.ConexaoBanco;
-import com.example.application.entity.dto.Login;
+import com.example.application.dto.Login;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,7 +41,6 @@ public class LoginDao {
     }
 
     public static List<Login> buscarTodosLogins() {
-        //implemente esse metodo
         List<Login> logins = new ArrayList<>();
         String sql = "SELECT * FROM logins";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

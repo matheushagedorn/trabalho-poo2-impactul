@@ -1,7 +1,7 @@
 package com.example.application.database.dataprovider;
 
 import com.example.application.dao.GastoDao;
-import com.example.application.entity.dto.Gasto;
+import com.example.application.dto.Gasto;
 import com.vaadin.flow.component.crud.CrudFilter;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 import static java.util.Comparator.naturalOrder;
 
 public class GastoDataProvider extends AbstractBackEndDataProvider<Gasto, CrudFilter> {
-        final List<Gasto> DATABASE = new ArrayList<>(GastoDao.buscarTodosGastos());
+        public static final List<Gasto> DATABASE = new ArrayList<>(GastoDao.buscarTodosGastos());
 
         private Consumer<Long> sizeChangeListener;
 

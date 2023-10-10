@@ -2,8 +2,8 @@ package com.example.application.views.impactul;
 
 import com.example.application.dao.LoginDao;
 import com.example.application.database.dataprovider.GanhoDataProvider;
-import com.example.application.entity.dto.Ganho;
-import com.example.application.entity.dto.Login;
+import com.example.application.dto.Ganho;
+import com.example.application.dto.Login;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.combobox.ComboBox;
@@ -23,14 +23,10 @@ import com.vaadin.flow.data.renderer.TextRenderer;
 import com.vaadin.flow.router.Route;
 
 import java.time.LocalDate;
-import java.util.List;
 
 
 @Route("ganhos")
 public class GanhoCrud extends Div {
-
-    List<Ganho> database = GanhoDataProvider.DATABASE;
-
     private Crud<Ganho> crud;
 
     public GanhoCrud() {

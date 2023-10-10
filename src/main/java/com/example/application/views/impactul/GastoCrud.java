@@ -1,11 +1,9 @@
 package com.example.application.views.impactul;
 
 import com.example.application.dao.LoginDao;
-import com.example.application.database.dataprovider.GanhoDataProvider;
 import com.example.application.database.dataprovider.GastoDataProvider;
-import com.example.application.entity.dto.Ganho;
-import com.example.application.entity.dto.Gasto;
-import com.example.application.entity.dto.Login;
+import com.example.application.dto.Gasto;
+import com.example.application.dto.Login;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.combobox.ComboBox;
@@ -29,8 +27,6 @@ import java.util.List;
 
 @Route("gastos")
 public class GastoCrud extends Div {
-    List<Ganho> database = GanhoDataProvider.DATABASE;
-
     private Crud<Gasto> crud;
 
     public GastoCrud() {
@@ -82,7 +78,7 @@ public class GastoCrud extends Div {
                         .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         grid.addColumn(dataCriacao).setHeader("Data de Criação").setSortable(true).setComparator(gasto -> getDataCriacao(gasto).toString());
         grid.addColumn(Gasto::getFormaPagamento).setHeader("Forma de Pagamento").setSortable(true);
-        grid.addColumn(ganho -> ganho.getUsuario().getUsuario()).setHeader("Usuario").setSortable(true);
+        grid.addColumn(gasto -> gasto.getUsuario().getUsuario()).setHeader("Usuario").setSortable(true);
         return grid;
     }
 

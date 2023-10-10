@@ -1,7 +1,7 @@
 package com.example.application.database.dataprovider;
 
 import com.example.application.dao.GanhoDao;
-import com.example.application.entity.dto.Ganho;
+import com.example.application.dto.Ganho;
 import com.vaadin.flow.component.crud.CrudFilter;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
